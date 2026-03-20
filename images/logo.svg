@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" width="780" height="220">
+  <defs>
+    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a5c"/>
+      <stop offset="100%" style="stop-color:#0f2a45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: Stilisiertes H mit Pfeil -->
+  <g transform="translate(20, 20)">
+    <rect x="0" y="0" width="170" height="180" rx="6" fill="#1a3a5c"/>
+    <rect x="22" y="25" width="28" height="130" fill="white"/>
+    <rect x="22" y="75" width="98" height="28" fill="white"/>
+    <rect x="120" y="25" width="28" height="130" fill="white"/>
+    <rect x="0" y="152" width="170" height="28" rx="0" fill="#e8771f"/>
+    <polygon points="75,158 115,166 75,174" fill="white" opacity="0.9"/>
+    <rect x="38" y="163" width="37" height="6" fill="white" opacity="0.9"/>
+  </g>
+
+  <!-- Firmenname -->
+  <text x="215" y="90" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="68" fill="#1a3a5c" letter-spacing="2">HARTMANN</text>
+
+  <!-- Trennlinie -->
+  <rect x="215" y="105" width="540" height="4" fill="#e8771f"/>
+
+  <!-- Untertitel -->
+  <text x="217" y="148" font-family="Arial, sans-serif" font-weight="400" font-size="32" fill="#444444" letter-spacing="8">LOGISTIK GMBH</text>
+
+  <!-- Claim -->
+  <text x="219" y="185" font-family="Arial, sans-serif" font-size="17" fill="#888888" letter-spacing="2">Ihr zuverlässiger Partner seit 1997</text>
+</svg>

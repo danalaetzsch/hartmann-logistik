@@ -83,26 +83,18 @@ ul li {
 
 #header-logo {
     float: left;
-    padding-top: 18px;
+    padding-top: 10px;
 }
 
-#header-logo .logo-text {
-    font-size: 26px;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 1px;
+#header-logo a {
+    display: block;
+    line-height: 0;
 }
 
-#header-logo .logo-text span {
-    color: #e87722;
-}
-
-#header-logo .logo-sub {
-    font-size: 11px;
-    color: #aaccee;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 2px;
+#header-logo img {
+    height: 70px;
+    width: auto;
+    display: block;
 }
 
 #header-contact {
