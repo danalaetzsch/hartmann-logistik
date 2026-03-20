@@ -83,7 +83,7 @@ ul li {
 
 #header-logo {
     float: left;
-    padding-top: 10px;
+    padding-top: 12px;
 }
 
 #header-logo a {
@@ -92,7 +92,7 @@ ul li {
 }
 
 #header-logo img {
-    height: 70px;
+    height: 78px;
     width: auto;
     display: block;
 }

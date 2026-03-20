@@ -1,31 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" width="780" height="220">
-  <defs>
-    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a3a5c"/>
-      <stop offset="100%" style="stop-color:#0f2a45"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 130" width="580" height="130">
 
-  <!-- Icon: Stilisiertes H mit Pfeil -->
-  <g transform="translate(20, 20)">
-    <rect x="0" y="0" width="170" height="180" rx="6" fill="#1a3a5c"/>
-    <rect x="22" y="25" width="28" height="130" fill="white"/>
-    <rect x="22" y="75" width="98" height="28" fill="white"/>
-    <rect x="120" y="25" width="28" height="130" fill="white"/>
-    <rect x="0" y="152" width="170" height="28" rx="0" fill="#e8771f"/>
-    <polygon points="75,158 115,166 75,174" fill="white" opacity="0.9"/>
-    <rect x="38" y="163" width="37" height="6" fill="white" opacity="0.9"/>
+  <!-- Icon: H mit Pfeil -->
+  <g>
+    <rect x="0" y="0" width="110" height="130" rx="4" fill="#1a3a5c"/>
+    <rect x="14" y="16" width="20" height="98" fill="white"/>
+    <rect x="14" y="54" width="72" height="22" fill="white"/>
+    <rect x="76" y="16" width="20" height="98" fill="white"/>
+    <rect x="0" y="108" width="110" height="22" rx="0" fill="#e8771f"/>
+    <polygon points="46,112 78,119 46,126" fill="white" opacity="0.95"/>
+    <rect x="18" y="115" width="28" height="8" fill="white" opacity="0.95"/>
   </g>
 
   <!-- Firmenname -->
-  <text x="215" y="90" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="68" fill="#1a3a5c" letter-spacing="2">HARTMANN</text>
+  <text x="130" y="62" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="52" fill="#1a3a5c" letter-spacing="1">HARTMANN</text>
 
   <!-- Trennlinie -->
-  <rect x="215" y="105" width="540" height="4" fill="#e8771f"/>
+  <rect x="130" y="74" width="440" height="3" fill="#e8771f"/>
 
   <!-- Untertitel -->
-  <text x="217" y="148" font-family="Arial, sans-serif" font-weight="400" font-size="32" fill="#444444" letter-spacing="8">LOGISTIK GMBH</text>
+  <text x="132" y="108" font-family="Arial, sans-serif" font-weight="400" font-size="26" fill="#555555" letter-spacing="6">LOGISTIK GMBH</text>
 
-  <!-- Claim -->
-  <text x="219" y="185" font-family="Arial, sans-serif" font-size="17" fill="#888888" letter-spacing="2">Ihr zuverlässiger Partner seit 1997</text>
 </svg>

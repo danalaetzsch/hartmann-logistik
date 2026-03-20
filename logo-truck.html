@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; background: #222; display: flex; flex-direction: column; align-items: center; padding: 20px; font-family: Arial; }
+  canvas { max-width: 100%; border: 1px solid #555; }
+  button { margin-top: 15px; padding: 12px 28px; background: #e8771f; color: white; border: none; font-size: 16px; cursor: pointer; border-radius: 4px; }
+  button:hover { background: #cf6510; }
+  p { color: #aaa; font-size: 13px; margin-top: 8px; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<button onclick="download()">⬇ Als PNG herunterladen</button>
+<p>Logo-Positionen können im Code angepasst werden</p>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+
+const truck = new Image();
+truck.crossOrigin = 'anonymous';
+truck.src = 'images/lkw.png';
+
+truck.onload = function() {
+  canvas.width = truck.width;
+  canvas.height = truck.height;
+
+  // Originalbild zeichnen
+  ctx.drawImage(truck, 0, 0);
+
+  const W = truck.width;
+  const H = truck.height;
+
+  // ── NASCH-Logos übermalen ──────────────────────────────────────
+  // Weiß drübermalen (gleiche Farbe wie Trailer)
+  function coverNasch(x, y, w, h) {
+    ctx.fillStyle = '#f0efed'; // leicht gebrochenes Weiß wie der LKW
+    ctx.fillRect(x, y, w, h);
+  }
+
+  // 1) Großes NASCH-Logo auf Haupttrailer (Mitte)
+  const m = { x: W*0.42, y: H*0.30, w: W*0.22, h: H*0.28 };
+  coverNasch(m.x, m.y, m.w, m.h);
+  drawHartmann(m.x + m.w/2, m.y + m.h/2, m.w * 0.85);
+
+  // 2) Kleines NASCH auf Fahrerhaus (links)
+  const s = { x: W*0.065, y: H*0.32, w: W*0.085, h: H*0.13 };
+  coverNasch(s.x, s.y, s.w, s.h);
+  drawHartmann(s.x + s.w/2, s.y + s.h/2, s.w * 0.85);
+
+  // 3) NASCH auf zweitem Anhänger (rechts)
+  const r = { x: W*0.74, y: H*0.30, w: W*0.19, h: H*0.28 };
+  coverNasch(r.x, r.y, r.w, r.h);
+  drawHartmann(r.x + r.w/2, r.y + r.h/2, r.w * 0.85);
+};
+
+function drawHartmann(cx, cy, boxWidth) {
+  const bh = boxWidth * 0.38;
+  const bx = cx - boxWidth/2;
+  const by = cy - bh/2;
+
+  // Roter Hintergrund (wie NASCH-Stil)
+  ctx.fillStyle = '#1a3a5c';
+  ctx.fillRect(bx, by, boxWidth, bh);
+
+  // Oranger Akzentstreifen unten
+  const stripeH = bh * 0.18;
+  ctx.fillStyle = '#e8771f';
+  ctx.fillRect(bx, by + bh - stripeH, boxWidth, stripeH);
+
+  // Text "HARTMANN"
+  const fontSize = bh * 0.38;
+  ctx.fillStyle = '#ffffff';
+  ctx.font = `900 ${fontSize}px Arial Black, Arial`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('HARTMANN', cx, by + bh * 0.42);
+
+  // Subtext
+  const subSize = fontSize * 0.35;
+  ctx.font = `${subSize}px Arial`;
+  ctx.letterSpacing = '2px';
+  ctx.fillText('LOGISTIK GMBH', cx, by + bh * 0.68);
+}
+
+function download() {
+  const a = document.createElement('a');
+  a.download = 'hartmann-lkw.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
